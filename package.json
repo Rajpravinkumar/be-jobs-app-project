@@ -1,0 +1,20 @@
+{
+  "name": "be-jobsapp-project",
+  "version": "1.0.0",
+  "description": "## This ia a job protal application that allows user to create an account , login and apply for jobs.",
+
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rajpravinkumar/be-jobs-app-project.git"
+  },
+  "author": "Rajpravinkumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rajpravinkumar/be-jobs-app-project/issues"
+  },
+  "homepage": "https://github.com/Rajpravinkumar/be-jobs-app-project#readme"
+}
