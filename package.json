@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "Scripts" : "node server.js",
+    "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Rajpravinkumar/be-jobs-app-project#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
     "cookies-parser": "^1.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -29,6 +30,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.8",
     "nodemon": "^3.1.9"
   }
 }

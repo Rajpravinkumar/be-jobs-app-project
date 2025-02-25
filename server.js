@@ -1,22 +1,18 @@
-const mongoose = require('mongoose');
+require("dotenv").config(); // Load environment variables
+const mongoose = require("mongoose");
 
-const { MONGODB_URI , PORT } = require('./utils/config');
-const app = require('./app')
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
 
+    console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.error(`❌ MongoDB Connection Error: ${error.message}`);
+    process.exit(1);
+  }
+};
 
-console.log(`Connecting to the database...`);
-mongoose.connect(MONGODB_URI)
-    .then(() => {
-        console.log(`connected to the database!`);
-
-        // Start the server 
-        app.listen(PORT, () => {
-            console.log(`Server running @ http://localhost:${PORT}`);
-    
-        });
-    })
-    
-    
-    .catch((error) => {
-    console.log(`Error connecting to the database: ${error}`)
-})
+module.exports = connectDB;
